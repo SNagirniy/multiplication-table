@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Ding Extra Layer Line';
+    src: url('DingExtra-LayerLine.eot');
+    src: local('Ding Extra Layer Line'), local('DingExtra-LayerLine'),
+        url('DingExtra-LayerLine.eot?#iefix') format('embedded-opentype'),
+        url('DingExtra-LayerLine.woff2') format('woff2'),
+        url('DingExtra-LayerLine.woff') format('woff'),
+        url('DingExtra-LayerLine.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ding Extra';
+    src: url('DingExtra-Heavy.eot');
+    src: local('Ding Extra Heavy'), local('DingExtra-Heavy'),
+        url('DingExtra-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('DingExtra-Heavy.woff2') format('woff2'),
+        url('DingExtra-Heavy.woff') format('woff'),
+        url('DingExtra-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ding Extra Dingbats';
+    src: url('DingExtra-Dingbats.eot');
+    src: local('Ding Extra Dingbats'), local('DingExtra-Dingbats'),
+        url('DingExtra-Dingbats.eot?#iefix') format('embedded-opentype'),
+        url('DingExtra-Dingbats.woff2') format('woff2'),
+        url('DingExtra-Dingbats.woff') format('woff'),
+        url('DingExtra-Dingbats.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ding Extra Heavy Line';
+    src: url('DingExtra-HeavyLine.eot');
+    src: local('Ding Extra Heavy Line'), local('DingExtra-HeavyLine'),
+        url('DingExtra-HeavyLine.eot?#iefix') format('embedded-opentype'),
+        url('DingExtra-HeavyLine.woff2') format('woff2'),
+        url('DingExtra-HeavyLine.woff') format('woff'),
+        url('DingExtra-HeavyLine.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ding Extra Shadow';
+    src: url('DingExtra-Shadow.eot');
+    src: local('Ding Extra Shadow'), local('DingExtra-Shadow'),
+        url('DingExtra-Shadow.eot?#iefix') format('embedded-opentype'),
+        url('DingExtra-Shadow.woff2') format('woff2'),
+        url('DingExtra-Shadow.woff') format('woff'),
+        url('DingExtra-Shadow.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ding Extra Shadow Simple';
+    src: url('DingExtra-ShadowSimpleHeavy.eot');
+    src: local('Ding Extra Shadow Simple Heavy'), local('DingExtra-ShadowSimpleHeavy'),
+        url('DingExtra-ShadowSimpleHeavy.eot?#iefix') format('embedded-opentype'),
+        url('DingExtra-ShadowSimpleHeavy.woff2') format('woff2'),
+        url('DingExtra-ShadowSimpleHeavy.woff') format('woff'),
+        url('DingExtra-ShadowSimpleHeavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+

@@ -1,8 +1,24 @@
-@import-normalize; /* bring in normalize.css styles */
+@import-normalize; 
+ 
+ /* bring in normalize.css styles */
+
+@font-face {
+  font-family: 'DingExtra-HeavyLine';
+  font-style: normal;
+  font-weight: 900;
+  src: local('DingExtra-HeavyLine'),
+    url('/assets/Fonts/DingExtra-HeavyLine.ttf') format('truetype'),
+    url('/assets/Fonts/DingExtra-HeavyLine.eot') format('embedded-opentype'),
+    url('/assets/Fonts/DingExtra-HeavyLine.woff2') format('woff2'),
+    url('/assets/Fonts/DingExtra-HeavyLine.woff') format('woff');
+}
+
+
+
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'DingExtra-HeavyLine',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
