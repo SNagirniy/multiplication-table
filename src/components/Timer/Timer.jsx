@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import CounterSceleton from 'components/CounterSceleton/CounterSceleton';
+import sprite from '../../images/sprite.svg';
 
 const Timer = ({ isTimerActive, toggleTimer, seconds, setSeconds }) => {
   useEffect(() => {
@@ -10,10 +12,6 @@ const Timer = ({ isTimerActive, toggleTimer, seconds, setSeconds }) => {
     }
   }, [seconds, isTimerActive]);
 
-  return (
-    <div>
-      <p> Time left: {seconds}</p>
-    </div>
-  );
+  return <CounterSceleton counter={seconds} icon={sprite + '#icon-clock'} />;
 };
 export default Timer;

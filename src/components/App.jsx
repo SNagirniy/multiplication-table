@@ -1,18 +1,15 @@
-import GameWrapper from './GameWrapper/GameWrapper';
+import GamePage from 'pages/GamePage/GamePage';
+import LearnPage from 'pages/LearnPage/LearnPage';
+import Layout from './Layout/Layout';
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
 
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 20,
-        color: '#010101',
-      }}
-    >
-      <GameWrapper />
-    </div>
+    <Layout>
+      <Header />
+      <LearnPage />
+      <Footer />
+    </Layout>
   );
 };

@@ -1,0 +1,18 @@
+
+
+.footer{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 5px 0;
+    background-color: rgba(196, 193, 193, 0.329);
+    border-top: 1px solid rgba(196, 193, 193, 0.548);
+    
+}
+
+.text{
+    font-size: 12px;
+    font-weight: 300;
+    color: rgb(226, 43, 165);
+}

@@ -1,0 +1,36 @@
+
+
+.thumb {
+    position: absolute;
+    top:95px;
+    left:125px;
+     width:180px;
+     height: 180px;
+     object-fit: cover;
+
+ 
+};
+
+
+
+.thumb:before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(#67d1e9 10%, #006a7b 50%, #00404e 100%);
+    border-radius: 50%;
+    filter: blur(15px);
+    transform: rotateZ(385deg);
+}
+.thumb:after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 40px;
+    background: rgba(0,0,0,0.420);
+    border-radius: 50%;
+    bottom: -20%;
+    right: 0;
+    filter: blur(15px);
+}

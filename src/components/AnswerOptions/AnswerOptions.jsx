@@ -1,19 +1,32 @@
+import s from './answer_options.module.css';
+
 const AnswerOptions = ({
   answerOptArray,
-  currentValue,
   correctAnsw,
   handleChange,
+  answer,
 }) => {
+  const styleClass = item => {
+    if (item === answer && answer === correctAnsw) {
+      return s.card_correct;
+    } else if (item === answer && answer !== correctAnsw) {
+      return s.card_wrong;
+    } else {
+      return s.card;
+    }
+  };
   return (
-    <div role="radiogroup">
+    <div className={s.container} role="radiogroup">
       {answerOptArray.map(item => {
-        const isDisabled = currentValue ? true : false;
+        const isDisabled = answer ? true : false;
+
         return (
-          <label key={`${item}`}>
+          <label className={styleClass(item)} key={`${item}`}>
             {item}
             <input
+              className={s.card_input}
               name="answer"
-              onClick={!currentValue ? handleChange : null}
+              onClick={!answer ? handleChange : null}
               value={item}
               type="radio"
               disabled={isDisabled}
