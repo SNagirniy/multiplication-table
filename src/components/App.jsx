@@ -8,7 +8,7 @@ export const App = () => {
   return (
     <Layout>
       <Header />
-      <LearnPage />
+      <GamePage />
       <Footer />
     </Layout>
   );

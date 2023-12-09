@@ -1,0 +1,20 @@
+.card_thumb{
+ 
+  border: solid rgba(36, 35, 35, 0.432);
+  border-color: rgb(70, 68, 68);
+  
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+              rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-width: 4px 5px 4px 6px;
+  border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+  transform: rotate(2deg);
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   padding: 2rem;
+  transform: rotate(-2deg);
+}

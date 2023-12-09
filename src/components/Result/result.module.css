@@ -1,0 +1,28 @@
+.container{
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 6rem 4rem;
+}
+
+.card_title{
+    font-size: 5rem;
+}
+.card_box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+   width: 35rem;
+}
+
+.card_value{
+    font-size: 5rem;
+}
+
+.card_big{
+    transform: scale(1.2);
+}
+
+.card_small{
+    transform: scale(0.8);
+}

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import s from './game.module.css';
 
 import AnswerOptions from 'components/AnswerOptions/AnswerOptions';
+import Card from 'components/Card/Card';
 import Timer from 'components/Timer/Timer';
 import GameCounter from 'components/GameCounter/GameCounter';
 import EmojiFace from 'components/EmojiFace/EmojiFace';
@@ -14,7 +15,13 @@ const initialDataValue = {
   answer_options: [],
 };
 
-const Game = ({ multipLevel, toggleGame, gameAmount }) => {
+const Game = ({
+  multipLevel,
+  toggleGame,
+  gameAmount,
+  toggleModal,
+  setGameResult,
+}) => {
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(false);
   const [gameCounter, setGameCounter] = useState(1);
   const [data, setData] = useState(initialDataValue);
@@ -27,7 +34,13 @@ const Game = ({ multipLevel, toggleGame, gameAmount }) => {
   const [seconds, setSeconds] = useState(10);
 
   useEffect(() => {
-    gameCounter > gameAmount && toggleGame();
+    if (gameCounter > gameAmount) {
+      const results = {
+        correctAnswer: rightAnsw,
+        wrongAnswer: wrongAnsw,
+      };
+      return setGameResult(results), toggleGame(), toggleModal();
+    }
   }, [gameCounter]);
 
   useEffect(() => {
@@ -82,13 +95,13 @@ const Game = ({ multipLevel, toggleGame, gameAmount }) => {
       </div>
 
       <div className={s.task_box}>
-        <div className={s.card_tumb}>
-          <p className={s.card}>{data.x}</p>
-        </div>
+        <Card>
+          <p className={s.card_value}>{data.x}</p>
+        </Card>
         x
-        <div className={s.card_tumb}>
-          <p className={s.card}>{data.y}</p>
-        </div>
+        <Card>
+          <p className={s.card_value}>{data.y}</p>
+        </Card>
       </div>
       <AnswerOptions
         answerOptArray={data.answer_options}
