@@ -1,0 +1,23 @@
+
+
+.back_button{
+    padding: 0.5rem;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 2rem;
+    
+    transition: transform 150ms ease-in-out;
+}
+.back_button:hover{
+    transform: scale(1.1);
+    box-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.back_button_image{
+    width: 3rem;
+    height: 3rem;
+    fill: rgb(0, 0, 0);
+}

@@ -6,7 +6,7 @@ import Card from 'components/Card/Card';
 import Timer from 'components/Timer/Timer';
 import GameCounter from 'components/GameCounter/GameCounter';
 import EmojiFace from 'components/EmojiFace/EmojiFace';
-import shuffle from 'helpers/helpers';
+import { shuffle } from 'helpers/helpers';
 
 const initialDataValue = {
   x: 0,

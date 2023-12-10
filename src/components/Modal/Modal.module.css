@@ -42,7 +42,7 @@
     border: none;
     cursor: pointer;
     z-index: 100;
-    transition: skale 250ms linear;
+    transition: scale 250ms linear;
    
 }
 
@@ -55,6 +55,11 @@
     width:15px;
     height: 15px;
     fill: rgb(32, 32, 32);
+    transition: fill 250ms linear
 
+}
+
+.modal_btn:hover .hide_modal_btn_icon{
+  fill: chocolate;
 }
 

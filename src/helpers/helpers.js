@@ -25,4 +25,4 @@ const shuffle = num => {
   };
 };
 
-export default shuffle;
+export { shuffle };

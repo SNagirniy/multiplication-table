@@ -8,6 +8,8 @@ import Button from '../../components/Button/Button';
 import SettingsBox from 'components/SettingsBox/SettingsBox';
 import Modal from 'components/Modal/Modal';
 import Result from 'components/Result/Result';
+import BackButton from 'components/BackButton/BackButton';
+import { useNavigate } from 'react-router-dom';
 
 const langObj = {
   eng: { task: 'Number of tasks', start_btn: 'Start game' },
@@ -24,7 +26,9 @@ const GamePage = () => {
   });
   const [lang, setLang] = useState('eng');
 
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
+
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
@@ -40,6 +44,7 @@ const GamePage = () => {
     <PageWrapper>
       {!gameActive && (
         <>
+          <BackButton clickFunc={() => navigate('/')} />
           <SettingsBox>
             <GameAmountInput
               gameAmount={gameAmount}
@@ -61,13 +66,16 @@ const GamePage = () => {
         </>
       )}
       {gameActive && (
-        <Game
-          multipLevel={multipLevel}
-          toggleGame={toggleGame}
-          gameAmount={gameAmount}
-          toggleModal={toggleModal}
-          setGameResult={setGameResult}
-        />
+        <>
+          <BackButton clickFunc={toggleGame} />
+          <Game
+            multipLevel={multipLevel}
+            toggleGame={toggleGame}
+            gameAmount={gameAmount}
+            toggleModal={toggleModal}
+            setGameResult={setGameResult}
+          />
+        </>
       )}
     </PageWrapper>
   );

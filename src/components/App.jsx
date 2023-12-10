@@ -1,15 +1,21 @@
+import { Routes, Route, Navigate } from 'react-router-dom';
+
 import GamePage from 'pages/GamePage/GamePage';
 import LearnPage from 'pages/LearnPage/LearnPage';
+import HomePage from 'pages/HomePage/HomePage';
 import Layout from './Layout/Layout';
-import Header from './Header/Header';
-import Footer from './Footer/Footer';
 
 export const App = () => {
   return (
-    <Layout>
-      <Header />
-      <GamePage />
-      <Footer />
-    </Layout>
+    <div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="game" element={<GamePage />} />
+          <Route path="learn" element={<LearnPage />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Route>
+      </Routes>
+    </div>
   );
 };

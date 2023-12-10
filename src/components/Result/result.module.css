@@ -5,24 +5,23 @@ align-items: center;
 padding: 6rem 4rem;
 }
 
+.correct_card{
+background-color: rgb(0, 255, 0);
+}
+.wrong_card{
+    background-color: red;
+}
+
 .card_title{
     font-size: 5rem;
 }
 .card_box{
     display: flex;
     justify-content: space-between;
-    margin-top: 3rem;
+    margin-top: 5rem;
    width: 35rem;
 }
 
 .card_value{
     font-size: 5rem;
-}
-
-.card_big{
-    transform: scale(1.2);
-}
-
-.card_small{
-    transform: scale(0.8);
 }
