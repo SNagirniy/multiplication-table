@@ -11,12 +11,7 @@ import Result from 'components/Result/Result';
 import BackButton from 'components/BackButton/BackButton';
 import { useNavigate } from 'react-router-dom';
 
-const langObj = {
-  eng: { task: 'Number of tasks', start_btn: 'Start game' },
-  ua: { task: 'Кількість завдань', start_btn: 'Почати гру' },
-};
-
-const GamePage = () => {
+const GamePage = ({ vocab }) => {
   const [gameActive, setGameActive] = useState(false);
   const [multipLevel, setMultipLevel] = useState('');
   const [gameAmount, setGameAmount] = useState(5);
@@ -24,7 +19,7 @@ const GamePage = () => {
     correctAnswer: 0,
     wrongAnswer: 0,
   });
-  const [lang, setLang] = useState('eng');
+  const { start_btn, numberValue, multiplier_value } = vocab;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
@@ -49,18 +44,23 @@ const GamePage = () => {
             <GameAmountInput
               gameAmount={gameAmount}
               setGameAmount={setGameAmount}
-              text={langObj[lang].task}
+              text={numberValue}
             />
             <MultiplicationLevelInput
               levelValue={multipLevel}
               changeMultipLevel={handleChangeMultipLevel}
+              text={multiplier_value}
             />
           </SettingsBox>
 
-          <Button cbFunc={toggleGame} name={langObj[lang].start_btn} />
+          <Button cbFunc={toggleGame} name={start_btn} />
           {isModalOpen && (
             <Modal onClose={toggleModal}>
-              <Result gameResult={gameResult} gameAmmount={gameAmount} />
+              <Result
+                vocab={vocab}
+                gameResult={gameResult}
+                gameAmmount={gameAmount}
+              />
             </Modal>
           )}
         </>

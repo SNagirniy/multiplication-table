@@ -1,7 +1,9 @@
 import s from './header.module.css';
 import x from '../../images/x.png';
+import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher';
 
-const Header = () => {
+const Header = ({ currentLang, setLanguage, vocab }) => {
+  const { journal } = vocab;
   return (
     <header className={s.header}>
       <div className={s.container}>
@@ -9,8 +11,11 @@ const Header = () => {
           <img className={s.logo_image} src={x} alt="logo" />
         </div>
         <div className={s.box}>
-          <p>eng</p>
-          <p>Journal</p>
+          <LanguageSwitcher
+            currentLang={currentLang}
+            setLanguage={setLanguage}
+          />
+          <p>{journal}</p>
         </div>
       </div>
     </header>

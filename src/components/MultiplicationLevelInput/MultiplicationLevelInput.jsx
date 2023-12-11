@@ -1,6 +1,6 @@
 import s from './multip_level_input.module.css';
 
-const MultiplicationLevelInput = ({ levelValue, changeMultipLevel }) => {
+const MultiplicationLevelInput = ({ levelValue, changeMultipLevel, text }) => {
   const valueArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0];
 
   const handleClick = e => {
@@ -10,7 +10,7 @@ const MultiplicationLevelInput = ({ levelValue, changeMultipLevel }) => {
 
   return (
     <div className={s.box}>
-      <p className={s.label}>Multiply to:</p>
+      <p className={s.label}>{text}</p>
       <div className={s.custom_select}>
         <select
           className={s.select}

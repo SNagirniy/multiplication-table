@@ -8,7 +8,7 @@
 }
 .container{
     display: flex;
-    padding: 0.3rem 6rem;
+    padding: 0 6rem;
     width: 90%;
    margin: auto;
    justify-content: space-between;
@@ -30,8 +30,12 @@
 	box-shadow: 1px 0 0 3px rgba(54, 53, 53, 0.2);
 	overflow: hidden;
     transform: perspective(20px) rotateY(15deg);
+    transition: transform 250ms ease-in-out;
 
-  
+}
+
+.logo_thumb:hover{
+    transform: perspective(20px) rotateY(8deg) scale(1.1);
 }
 
 
@@ -42,6 +46,6 @@
 
 .box{
     display: flex;
-    width: 10%;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
 }

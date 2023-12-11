@@ -3,8 +3,10 @@ import s from './result.module.css';
 
 import Card from 'components/Card/Card';
 
-const Result = ({ gameResult, gameAmmount }) => {
+const Result = ({ gameResult, gameAmmount, vocab }) => {
   const { correctAnswer, wrongAnswer } = gameResult;
+  const { result_good, result_middle, result_bad, card_correct, card_wrong } =
+    vocab;
   const cardSize = () => {
     const scaleVal = result => {
       return Math.round((result / gameAmmount) * 10) / 10;
@@ -28,9 +30,9 @@ const Result = ({ gameResult, gameAmmount }) => {
   const { correct, wrong, score } = cardSize();
 
   const title = score => {
-    if (score >= 0.8) return 'Good job!!!';
-    if (score < 0.6) return "Let's try again";
-    return 'Not bad!';
+    if (score >= 0.8) return result_good;
+    if (score < 0.6) return result_bad;
+    return result_middle;
   };
 
   return (
@@ -39,14 +41,14 @@ const Result = ({ gameResult, gameAmmount }) => {
       <div className={s.card_box}>
         <div style={correct}>
           <Card>
-            <p className={s.card_result}>Correct</p>
+            <p className={s.card_result}>{card_correct}</p>
             <p className={s.card_value}>{correctAnswer}</p>
           </Card>
         </div>
 
         <div style={wrong}>
           <Card>
-            <p className={s.card_result}>Wrong</p>
+            <p className={s.card_result}>{card_wrong}</p>
             <p className={s.card_value}>{wrongAnswer}</p>
           </Card>
         </div>
