@@ -1,5 +1,5 @@
 import s from './language_switcher.module.css';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const langList = [
   { lang_title: 'en' },
@@ -11,6 +11,8 @@ const LanguageSwitcher = ({ currentLang, setLanguage }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => setIsOpen(!isOpen);
 
+  const rootRef = useRef(null);
+
   const currentLangList = langList.filter(i => i.lang_title !== currentLang);
 
   const handleChangeLang = e => {
@@ -18,9 +20,27 @@ const LanguageSwitcher = ({ currentLang, setLanguage }) => {
     setLanguage(textContent);
     toggleDropdown();
   };
+
+  useEffect(() => {
+    const handleClick = event => {
+      const { target } = event;
+      if (target instanceof Node && !rootRef.current?.contains(target)) {
+        isOpen && setIsOpen(false);
+      }
+    };
+
+    window.addEventListener('click', handleClick);
+
+    return () => {
+      window.removeEventListener('click', handleClick);
+    };
+  }, [isOpen]);
+
   return (
     <div onClick={toggleDropdown} className={s.container}>
-      <div className={`${s.lang} ${s[currentLang]}`}>{currentLang}</div>
+      <div ref={rootRef} className={`${s.lang} ${s[currentLang]}`}>
+        {currentLang}
+      </div>
       {isOpen && (
         <ul className={s.dropdown}>
           {currentLangList.map(({ lang_title }) => (

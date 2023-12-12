@@ -8,7 +8,7 @@
 }
 .container{
     display: flex;
-    padding: 0 6rem;
+    padding: 0.25rem 6rem;
     width: 90%;
    margin: auto;
    justify-content: space-between;
@@ -48,4 +48,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+
+.diarybook_thumb{
+    width:2.5rem;
+    height: 2.5rem;
+
+   padding: 0.25rem;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.diarybook_icon{
+    width:100%;
+    height: 100%;
+    fill: #3a3936e0;
+    transition: all 250ms ease-in-out;
+}
+
+.diarybook_thumb:hover .diarybook_icon{
+    fill: whitesmoke;
+    filter: drop-shadow(2px 2px 1px #1e1f1e);
+    
 }

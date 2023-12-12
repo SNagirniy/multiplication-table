@@ -10,6 +10,7 @@ import Modal from 'components/Modal/Modal';
 import Result from 'components/Result/Result';
 import BackButton from 'components/BackButton/BackButton';
 import { useNavigate } from 'react-router-dom';
+import useLocalStorage from 'customHooks/useLocaleStortage';
 
 const GamePage = ({ vocab }) => {
   const [gameActive, setGameActive] = useState(false);
@@ -19,6 +20,7 @@ const GamePage = ({ vocab }) => {
     correctAnswer: 0,
     wrongAnswer: 0,
   });
+  const [state, setState] = useLocalStorage('diarybook', []);
   const { start_btn, numberValue, multiplier_value } = vocab;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -74,6 +76,7 @@ const GamePage = ({ vocab }) => {
             gameAmount={gameAmount}
             toggleModal={toggleModal}
             setGameResult={setGameResult}
+            setLocalStorState={setState}
           />
         </>
       )}

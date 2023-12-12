@@ -21,6 +21,7 @@ const Game = ({
   gameAmount,
   toggleModal,
   setGameResult,
+  setLocalStorState,
 }) => {
   const [isAnswerCorrect, setIsAnswerCorrect] = useState(false);
   const [gameCounter, setGameCounter] = useState(1);
@@ -39,7 +40,18 @@ const Game = ({
         correctAnswer: rightAnsw,
         wrongAnswer: wrongAnsw,
       };
-      return setGameResult(results), toggleGame(), toggleModal();
+      const localStorState = {
+        ...results,
+        gameAmount,
+        date: new Date().toLocaleDateString('ko-KR'),
+      };
+
+      return (
+        setLocalStorState(prev => [...prev, localStorState]),
+        setGameResult(results),
+        toggleGame(),
+        toggleModal()
+      );
     }
   }, [gameCounter]);
 

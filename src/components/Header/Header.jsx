@@ -1,8 +1,9 @@
 import s from './header.module.css';
 import x from '../../images/x.png';
+import sprite from '../../images/sprite.svg';
 import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher';
 
-const Header = ({ currentLang, setLanguage, vocab }) => {
+const Header = ({ currentLang, setLanguage, vocab, toggleModal }) => {
   const { journal } = vocab;
   return (
     <header className={s.header}>
@@ -15,7 +16,11 @@ const Header = ({ currentLang, setLanguage, vocab }) => {
             currentLang={currentLang}
             setLanguage={setLanguage}
           />
-          <p>{journal}</p>
+          <div onClick={toggleModal} className={s.diarybook_thumb}>
+            <svg className={s.diarybook_icon}>
+              <use href={sprite + '#icon-diarybook'}></use>
+            </svg>
+          </div>
         </div>
       </div>
     </header>

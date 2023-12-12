@@ -1,0 +1,50 @@
+
+.container{
+    padding: 2rem;
+    max-height: 30rem; 
+    overflow: hidden;
+    overflow-y: auto;
+
+}
+.container::-webkit-scrollbar{
+    display: none;
+}
+
+.table{
+    padding: 1rem;
+    font-size: 1.5rem;
+   
+    
+    
+
+}
+
+.raw{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem 1rem 0;
+}
+
+.raw_cell{
+    padding-right: 0.5rem;
+    
+}
+
+.star{
+    width: 1.5rem;
+    height: 1.5rem;
+     fill: #3a3936e0;
+     stroke: #3d3d3be0;
+    stroke-width: 3px;
+     stroke-opacity: 0.5;
+}
+
+.gold{
+    fill: gold;
+     stroke: rgb(255, 255, 255);
+    stroke-width: 3px;
+    stroke-opacity: 0.5;
+    
+}
