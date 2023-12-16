@@ -7,6 +7,7 @@ import Timer from 'components/Timer/Timer';
 import GameCounter from 'components/GameCounter/GameCounter';
 import EmojiFace from 'components/EmojiFace/EmojiFace';
 import { shuffle } from 'helpers/helpers';
+import sprite from '../../images/sprite.svg';
 
 const initialDataValue = {
   x: 0,
@@ -32,7 +33,7 @@ const Game = ({
   const [selectedAnswer, setSelectedAnswer] = useState(null);
 
   const [timerActive, setTimerActive] = useState(false);
-  const [seconds, setSeconds] = useState(10);
+  const [isOutOfTime, setIsOutOfTime] = useState(false);
 
   useEffect(() => {
     if (gameCounter > gameAmount) {
@@ -56,17 +57,17 @@ const Game = ({
   }, [gameCounter]);
 
   useEffect(() => {
-    if (seconds <= 0) {
+    if (!selectedAnswer && isOutOfTime) {
       setGameCounter(prev => prev + 1);
       setWrongAnsw(prev => prev + 1);
     }
-  }, [seconds]);
+  }, [isOutOfTime, selectedAnswer]);
 
   useEffect(() => {
     setData(shuffle(multipLevel));
     setIsAnswerCorrect(false);
     setSelectedAnswer(null);
-    setSeconds(10);
+    setIsOutOfTime(false);
     setTimerActive(true);
   }, [gameCounter, multipLevel]);
 
@@ -84,7 +85,7 @@ const Game = ({
 
     const timer = setTimeout(() => {
       setGameCounter(prev => prev + 1);
-    }, 1500);
+    }, 1000);
     return () => {
       clearTimeout(timer);
     };
@@ -100,20 +101,19 @@ const Game = ({
         <Timer
           isTimerActive={timerActive}
           toggleTimer={setTimerActive}
-          seconds={seconds}
-          setSeconds={setSeconds}
+          setIsOutOfTime={setIsOutOfTime}
         />
         <GameCounter counter={gameCounter} gameAmount={gameAmount} />
       </div>
 
       <div className={s.task_box}>
-        <Card>
-          <p className={s.card_value}>{data.x}</p>
-        </Card>
-        x
-        <Card>
-          <p className={s.card_value}>{data.y}</p>
-        </Card>
+        <Card num={data.x} />
+        <div className={s.icon_multip_thumb}>
+          <svg className={s.icon_multip}>
+            <use href={sprite + '#icon-multiply'}></use>
+          </svg>
+        </div>
+        <Card num={data.y} />
       </div>
       <AnswerOptions
         answerOptArray={data.answer_options}

@@ -2,15 +2,18 @@ import s from './header.module.css';
 import x from '../../images/x.png';
 import sprite from '../../images/sprite.svg';
 import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher';
+import { Link } from 'react-router-dom';
 
 const Header = ({ currentLang, setLanguage, vocab, toggleModal }) => {
   const { journal } = vocab;
   return (
     <header className={s.header}>
       <div className={s.container}>
-        <div className={s.logo_thumb}>
-          <img className={s.logo_image} src={x} alt="logo" />
-        </div>
+        <Link to="/">
+          <div className={s.logo_thumb}>
+            <img className={s.logo_image} src={x} alt="logo" />
+          </div>
+        </Link>
         <div className={s.box}>
           <LanguageSwitcher
             currentLang={currentLang}

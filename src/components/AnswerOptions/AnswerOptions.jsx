@@ -1,5 +1,5 @@
 import s from './answer_options.module.css';
-
+import Card from 'components/Card/Card';
 const AnswerOptions = ({
   answerOptArray,
   correctAnsw,
@@ -11,8 +11,6 @@ const AnswerOptions = ({
       return s.card_correct;
     } else if (item === answer && answer !== correctAnsw) {
       return s.card_wrong;
-    } else {
-      return s.card;
     }
   };
   return (
@@ -21,8 +19,11 @@ const AnswerOptions = ({
         const isDisabled = answer ? true : false;
 
         return (
-          <label className={styleClass(item)} key={`${item}`}>
-            {item}
+          <label
+            className={`${s.label} ${styleClass(item)}`}
+            htmlFor={item}
+            key={`${item}`}
+          >
             <input
               className={s.card_input}
               name="answer"
@@ -30,7 +31,9 @@ const AnswerOptions = ({
               value={item}
               type="radio"
               disabled={isDisabled}
+              id={item}
             />
+            <Card num={item} />
           </label>
         );
       })}

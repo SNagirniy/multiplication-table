@@ -4,7 +4,6 @@ import GamePage from 'pages/GamePage/GamePage';
 import LearnPage from 'pages/LearnPage/LearnPage';
 import HomePage from 'pages/HomePage/HomePage';
 import Layout from './Layout/Layout';
-
 import useLanguage from 'customHooks/useLanguage';
 
 export const App = () => {

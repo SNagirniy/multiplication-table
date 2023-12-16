@@ -1,9 +1,12 @@
 
 .container{
-    padding: 2rem;
+    padding: 4rem;
     max-height: 30rem; 
     overflow: hidden;
     overflow-y: auto;
+    font-size: 2rem;
+    color: whitesmoke;
+   text-shadow:  2px 2px 1px #1e1f1e;
 
 }
 .container::-webkit-scrollbar{
@@ -11,26 +14,31 @@
 }
 
 .table{
-    padding: 1rem;
-    font-size: 1.5rem;
-   
-    
-    
-
+margin: auto;
+width: 100%;
 }
+
 
 .raw{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    padding: 0 2rem 1rem 0;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgb(255, 255, 255);
 }
 
-.raw_cell{
-    padding-right: 0.5rem;
-    
+.table_title{
+    display: block;
+    font-size: 5rem;
+    margin-bottom: 5rem;
 }
+
+
+.star_box{
+    width: 50%;
+}
+
 
 .star{
     width: 1.5rem;
@@ -41,10 +49,16 @@
      stroke-opacity: 0.5;
 }
 
+
 .gold{
     fill: gold;
      stroke: rgb(255, 255, 255);
     stroke-width: 3px;
     stroke-opacity: 0.5;
+    filter: drop-shadow(2px 2px 1px #1e1f1e);
     
+}
+
+.raw_title{
+    font-size: 1rem;
 }

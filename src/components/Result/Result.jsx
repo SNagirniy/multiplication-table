@@ -40,17 +40,13 @@ const Result = ({ gameResult, gameAmmount, vocab }) => {
       <p className={s.card_title}>{title(score)}</p>
       <div className={s.card_box}>
         <div style={correct}>
-          <Card>
-            <p className={s.card_result}>{card_correct}</p>
-            <p className={s.card_value}>{correctAnswer}</p>
-          </Card>
+          <p className={s.card_result}>{card_correct}</p>
+          <Card num={correctAnswer} />
         </div>
 
         <div style={wrong}>
-          <Card>
-            <p className={s.card_result}>{card_wrong}</p>
-            <p className={s.card_value}>{wrongAnswer}</p>
-          </Card>
+          <p className={s.card_result}>{card_wrong}</p>
+          <Card num={wrongAnswer} />
         </div>
       </div>
     </div>

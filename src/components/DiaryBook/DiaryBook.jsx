@@ -14,7 +14,7 @@ const DiaryBook = () => {
 
   return (
     <div className={s.container}>
-      <h3>Diarybook</h3>
+      <h3 className={s.table_title}>Diarybook</h3>
       <table className={s.table}>
         <tbody>
           {state.map(({ date, correctAnswer, gameAmount }) => {
@@ -25,7 +25,7 @@ const DiaryBook = () => {
                   <td>{date}</td>
                 </tr>
                 <tr className={s.raw}>
-                  <td className={s.raw_cell}>
+                  <td className={`${s.raw_cell} ${s.star_box}`}>
                     <svg className={`${s.star} ${isStarGold(scoreVal, 20)}`}>
                       <use href={sprite + '#icon-star'}></use>
                     </svg>

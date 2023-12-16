@@ -14,7 +14,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    
     margin-bottom: 40px;
     color: whitesmoke;
     font-size: 72px;
@@ -22,10 +22,20 @@
 }
 
 
-.card_value{
- display: block;
-  text-align: center;
-  color: whitesmoke;
-  font-size: 72px;
-  transform: rotate(-2deg);}
+.icon_multip_thumb{
+    display: flex;
+    width: 4rem;
+    height: 4rem;
+    overflow:hidden;
+    
+    margin: 0 1rem;
+   
+}
+
+.icon_multip{
+    width: 100%;
+    height: 100%;
+    fill: rgba(255, 174, 0, 0.849);
+    filter: drop-shadow(2px 2px 1px #1e1f1e);
+}
 

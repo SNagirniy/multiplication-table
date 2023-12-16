@@ -36,6 +36,7 @@
 
 .logo_thumb:hover{
     transform: perspective(20px) rotateY(8deg) scale(1.1);
+    cursor: pointer;
 }
 
 
