@@ -5,7 +5,6 @@ import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher';
 import { Link } from 'react-router-dom';
 
 const Header = ({ currentLang, setLanguage, vocab, toggleModal }) => {
-  const { journal } = vocab;
   return (
     <header className={s.header}>
       <div className={s.container}>

@@ -20,7 +20,7 @@ const GamePage = ({ vocab }) => {
     correctAnswer: 0,
     wrongAnswer: 0,
   });
-  const [state, setState] = useLocalStorage('diarybook', []);
+  const [, setState] = useLocalStorage('diarybook', []);
   const { start_btn, numberValue, multiplier_value } = vocab;
 
   const [isModalOpen, setIsModalOpen] = useState(false);

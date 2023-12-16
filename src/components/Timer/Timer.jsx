@@ -15,7 +15,7 @@ const Timer = ({ isTimerActive, toggleTimer, setIsOutOfTime }) => {
       toggleTimer(false);
       setS(10);
     }
-  }, [s, isTimerActive]);
+  }, [s, isTimerActive, toggleTimer, setIsOutOfTime]);
 
   return <CounterSceleton counter={s} icon={sprite + '#icon-clock'} />;
 };

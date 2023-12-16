@@ -54,7 +54,16 @@ const Game = ({
         toggleModal()
       );
     }
-  }, [gameCounter]);
+  }, [
+    gameCounter,
+    gameAmount,
+    rightAnsw,
+    setGameResult,
+    setLocalStorState,
+    toggleGame,
+    toggleModal,
+    wrongAnsw,
+  ]);
 
   useEffect(() => {
     if (!selectedAnswer && isOutOfTime) {

@@ -52,8 +52,9 @@ const useLanguage = () => {
   const [currentVocab, setCurrentVocab] = useState({});
 
   useEffect(() => {
-    return setCurrentVocab(Vocabulary[lang]), setState(lang);
-  }, [lang]);
+    setCurrentVocab(Vocabulary[lang]);
+    setState(lang);
+  }, [lang, setState]);
 
   return [lang, currentVocab, setLang];
 };
