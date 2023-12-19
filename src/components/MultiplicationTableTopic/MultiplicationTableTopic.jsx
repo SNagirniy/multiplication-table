@@ -1,5 +1,5 @@
 import s from './multiplication_table_topic.module.css';
-
+import { v4 as uuidv4 } from 'uuid';
 const MultiplicationTableTopic = ({ setCurrNum, currentNum, numberArray }) => {
   const handleChange = e => {
     const value = e.currentTarget.textContent;
@@ -10,8 +10,8 @@ const MultiplicationTableTopic = ({ setCurrNum, currentNum, numberArray }) => {
       {numberArray.map(i => (
         <li
           onClick={handleChange}
-          className={i === currentNum ? s.item_checked : s.item}
-          key={i}
+          className={`${s.item} ${i === currentNum ? s.checked : ''}`}
+          key={uuidv4()}
         >
           {i}
         </li>

@@ -1,5 +1,6 @@
 import s from './language_switcher.module.css';
 import { useState, useRef, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 const langList = [
   { lang_title: 'en' },
@@ -45,7 +46,7 @@ const LanguageSwitcher = ({ currentLang, setLanguage }) => {
         <ul className={s.dropdown}>
           {currentLangList.map(({ lang_title }) => (
             <li
-              key={lang_title}
+              key={uuidv4()}
               className={`${s.dropdown_item} ${s[lang_title]}`}
               onClick={handleChangeLang}
             >

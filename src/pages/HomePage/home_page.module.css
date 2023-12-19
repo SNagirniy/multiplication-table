@@ -1,28 +1,26 @@
+@import '../../css/variables.css';
+
 .container{ 
 display: flex;
 width: 100%;
-height: 100%;
-justify-content: space-around;
-align-items: center;
- padding: 0 5rem;
+justify-content: space-between;
 
 }
 
 .hero_container_box{
-    background: linear-gradient(to right, rgba(255, 217, 0, 0.8), rgba(255, 140, 0, 0.8));
-	color: white;
-	--width: 250px;
-	--height: calc(var(--width) / 3);
-max-width: 65%;
-padding: 3rem;
+	
+	max-width: 75%;
+    background: var(--primary-bg);
+	color: var(--primary-color);
+	font-size:4rem;
+	padding: 3rem;
 	text-align: center;
-	line-height: var(--height);
   font-family: inherit;
-	border: 1px solid darkgoldenrod;
-	border-radius: 2em;
-	transform: perspective(500px) rotateY(5deg);
-	text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
-	box-shadow: 2px 0 0 5px rgba(0, 0, 0, 0.2);
+	border: var(--primary-border);
+	border-radius: 2rem;
+	transform: perspective(50vw) rotateY(5deg);
+	text-shadow: var(--text-shadow);
+	box-shadow: var(--box-shadow);
 	position: relative;
 	overflow: hidden;
 
@@ -31,16 +29,17 @@ padding: 3rem;
 .hero_title{
     text-transform: capitalize;
     text-align:start;
-     font-size: 5rem;
      text-wrap: wrap;
-    text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: var(--text-shadow);
+	
 
     
 }
 
-.container_box{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 60%;
+.container_box{  
+	display: flex;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+	justify-content: flex-end;
+    
 }

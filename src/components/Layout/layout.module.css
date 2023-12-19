@@ -5,10 +5,9 @@
    height: 100vh;
   margin-left: auto;
   margin-right: auto;
-  background-image:url('../../images/x.png'),url('../../images/8.png'),url('../../images/3.png'),url('../../images/4.png'), radial-gradient(circle, #e7f0b9, #eaf59b, #eff97a, #f6fc52, #fffe00);
-  background-size:  280px,260px,240px,80px, cover;
+  background-image:url('../../images/heropic.png'),url('../../images/numbers.png'),radial-gradient(circle, #e7f0b9, #eaf59b, #eff97a, #f6fc52, #fffe00);
+  background-size: 20vw, 60vw,contain ;
   background-repeat: no-repeat;
-  background-position: center left 320px,bottom 30px left 50px,bottom 10px right 10px,top 25px left 25px, center;
+  background-position: top left, bottom right, center;
     
-
 }

@@ -1,18 +1,29 @@
-
+@import '../../css/variables.css';
 
 .footer{
     width: 100%;
     display: flex;
     align-content: center;
     justify-content: center;
-    padding: 5px 0;
+    padding: 0.5rem 0;
     background-color: rgba(196, 193, 193, 0.329);
     border-top: 1px solid rgba(196, 193, 193, 0.548);
+    
     
 }
 
 .text{
-    font-size: 12px;
-    font-weight: 300;
-    color: rgb(226, 43, 165);
+    font-size: 1.2rem;
+    color: rgb(250, 250, 250);
+    filter: var(--filter);
 }
+.link{
+    margin-left: 1rem;
+    color: rgb(250, 250, 250);
+    filter: var(--filter);
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: transform var(--transParam);
+}
+
+.link:hover, link:focus{transform: scale(1.1);}

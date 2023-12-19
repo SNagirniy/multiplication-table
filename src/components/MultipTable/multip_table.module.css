@@ -1,39 +1,27 @@
-
+@import '../../css/variables.css';
 
 .table{
-    margin-top: 20px;
-    padding: 20px;
-    font-size: 32px;
-     background: radial-gradient(circle, rgba(222,243,246,0.6502976190476191) 0%, rgba(223,252,70,0.8995973389355743) 50%, rgba(252,155,70,0.8995973389355743) 100%);
-    text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
-    border: solid rgba(36, 35, 35, 0.432);
-    border-color: rgb(70, 68, 68);
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-              rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    border-width: 4px 5px 4px 6px;
-    border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+    margin-top: 1rem;
+    padding: 1rem 4rem;
+    min-width: 30%;
+    font-size: 3rem;
+background-image: url('../../images/card-bg.svg');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+border-radius: 25%;
+overflow: hidden;
+   
 }
 
 
 .table_cell{
-    padding: 0 15px;
     text-align: center;
+    color: var(--primary-color);
+    filter: var(--filter);
+
+    
+    
 }
 
 
-/*
-  background: radial-gradient(circle, rgba(222,243,246,0.6502976190476191) 0%, rgba(223,252,70,0.8995973389355743) 50%, rgba(252,155,70,0.8995973389355743) 100%);
- padding: 5%;
-  font-size: 72px;
-  color: #fff;
-  text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
-  border: solid rgba(36, 35, 35, 0.432);
-  border-color: rgb(70, 68, 68);
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-              rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  border-width: 4px 5px 4px 6px;
-  border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
-  transform: rotate(2deg);
-  cursor: pointer;
-  transition: all 250ms ease-in-out;
-*/

@@ -1,4 +1,5 @@
 import s from './multip_level_input.module.css';
+import { v4 as uuidv4 } from 'uuid';
 
 const MultiplicationLevelInput = ({ levelValue, changeMultipLevel, text }) => {
   const valueArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0];
@@ -22,7 +23,7 @@ const MultiplicationLevelInput = ({ levelValue, changeMultipLevel, text }) => {
             const val = i > 0 ? i : '';
             const title = i > 0 ? i : 'Random';
             return (
-              <option key={i} value={val}>
+              <option key={uuidv4()} value={val}>
                 {title}
               </option>
             );
