@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/multiplication-table/static/css/main.58b50716.css",
-    "main.js": "/multiplication-table/static/js/main.f7b6f506.js",
+    "main.css": "/multiplication-table/static/css/main.00339c60.css",
+    "main.js": "/multiplication-table/static/js/main.674359c3.js",
     "static/media/DingExtra-HeavyLine.eot": "/multiplication-table/static/media/DingExtra-HeavyLine.16d6da1408110ba04832.eot",
     "static/media/DingExtra-HeavyLine.ttf": "/multiplication-table/static/media/DingExtra-HeavyLine.77cee19f259fae80196b.ttf",
     "static/media/emoji-no.png": "/multiplication-table/static/media/emoji-no.0a1076a04c3de0f66c90.png",
@@ -16,11 +16,11 @@
     "static/media/pl.png": "/multiplication-table/static/media/pl.bf20272e28c0d7037f3f.png",
     "static/media/sprite.svg": "/multiplication-table/static/media/sprite.a7410e5b0b84c8af29f4cc8945c7d68a.svg",
     "index.html": "/multiplication-table/index.html",
-    "main.58b50716.css.map": "/multiplication-table/static/css/main.58b50716.css.map",
-    "main.f7b6f506.js.map": "/multiplication-table/static/js/main.f7b6f506.js.map"
+    "main.00339c60.css.map": "/multiplication-table/static/css/main.00339c60.css.map",
+    "main.674359c3.js.map": "/multiplication-table/static/js/main.674359c3.js.map"
   },
   "entrypoints": [
-    "static/css/main.58b50716.css",
-    "static/js/main.f7b6f506.js"
+    "static/css/main.00339c60.css",
+    "static/js/main.674359c3.js"
   ]
 }
