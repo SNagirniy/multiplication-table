@@ -8,12 +8,13 @@ const MultiplicationTableTopic = ({ setCurrNum, currentNum, numberArray }) => {
   return (
     <ul className={s.list}>
       {numberArray.map(i => (
-        <li
-          onClick={handleChange}
-          className={`${s.item} ${i === currentNum ? s.checked : ''}`}
-          key={uuidv4()}
-        >
-          {i}
+        <li className={s.item} key={uuidv4()}>
+          <p
+            className={`${s.item_val} ${i === currentNum ? s.checked : ''}`}
+            onClick={handleChange}
+          >
+            {i}
+          </p>
         </li>
       ))}
     </ul>

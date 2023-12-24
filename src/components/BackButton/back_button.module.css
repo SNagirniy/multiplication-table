@@ -1,4 +1,4 @@
-
+@import '../../css/variables.css';
 
 .back_button{
     position: absolute;
@@ -17,11 +17,11 @@
 .back_button_image{
    width:100%;
     height: 100%;
-    fill: #3a3936e0;
-    transition: all 250ms ease-in-out;
+    fill: var(--icon-color);
+    transition: all var(--transParam);
 }
 
-.back_button:hover .back_button_image{
-    fill: whitesmoke;
-    filter: drop-shadow(2px 2px 1px #1e1f1e);
+.back_button_image:hover {
+    fill: var(--primary-color);
+    filter: var(--filter);
 }

@@ -1,71 +1,73 @@
-
+@import '../../css/variables.css';
 
 
 .container{
   display: flex;
   flex-direction: column;
-  align-items: center;
   position: relative;
-  margin-right: 1rem ;
-  width: 4.5rem;
-  font-size: 1rem;
+  margin-right: 2rem ;
+  font-size: 3rem;
   color: #3a3936e0;
 }
+
 .lang{
-   width: 100%;
-   padding:0.8rem 0.8rem;
-   border-radius: 1.5rem;
-   text-align: right;
+display: flex;
+gap: 1rem;
+justify-content: space-between;
+align-items:flex-end;
+border-radius: 1.5rem;
 text-transform: capitalize;
 cursor: pointer;
-    text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
+text-shadow: var(--text-shadow);
     
 }
 .lang:hover{
-    color: rgba(245, 242, 242, 0.9);
+    color: var(--primary-color);
      text-shadow: none;
-    filter: drop-shadow(2px 2px 1px #1e1f1e);
+    filter: var(--filter);
    transform: scale(1.1);
 }
 
+.flag{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1.5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all var(--transParam);
+}
+
+
 .ua{
     background-image: url('../../images/ua.png');
-    background-size: 2.2rem;
-    background-position: left;
-    background-repeat: no-repeat;
-    transition: all 250ms ease-in-out;
+  
 }
 
 .pl{
     background-image: url('../../images/pl.png');
-    background-size: 2.2rem;
-    background-position: left;
-    background-repeat: no-repeat;
-    transition: all 250ms ease-in-out;
+
 }
 
 .en{
     background-image: url('../../images/eng.png');
-    background-size: 2.2rem;
-    background-position: left;
-    background-repeat: no-repeat;
-    transition: all 250ms ease-in-out;
+   
 }
 
 .dropdown{
     position: absolute;
-    top: 100%;
+    top: 130%;
     left: 0;
-    width: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-     
     z-index: 100;
 }
 
 .dropdown_item{
-    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items:flex-end;
    padding:0.8rem 0.5rem;
    box-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
    border-radius: 1.5rem;
@@ -79,5 +81,20 @@ transition: all 250ms ease-in;
     transform: scale(1.1);
 }
 
+
+@media screen and (min-width: 768px){
+.container{
+  
+  margin-right: 1rem ;
+  font-size: 1.5rem;
+}
+.lang{gap:0.5rem}
+
+.flag{
+    width: 3rem;
+    height: 3rem;
+}
+
+}
 
 

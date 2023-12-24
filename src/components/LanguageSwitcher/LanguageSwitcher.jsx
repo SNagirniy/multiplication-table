@@ -39,17 +39,19 @@ const LanguageSwitcher = ({ currentLang, setLanguage }) => {
 
   return (
     <div onClick={toggleDropdown} className={s.container}>
-      <div ref={rootRef} className={`${s.lang} ${s[currentLang]}`}>
-        {currentLang}
+      <div ref={rootRef} className={s.lang}>
+        <div className={`${s.flag} ${s[currentLang]}`}></div>
+        <p className={s.lang_val}>{currentLang}</p>
       </div>
       {isOpen && (
         <ul className={s.dropdown}>
           {currentLangList.map(({ lang_title }) => (
             <li
               key={uuidv4()}
-              className={`${s.dropdown_item} ${s[lang_title]}`}
+              className={s.dropdown_item}
               onClick={handleChangeLang}
             >
+              <div className={`${s.flag} ${s[lang_title]}`}></div>
               {lang_title}
             </li>
           ))}

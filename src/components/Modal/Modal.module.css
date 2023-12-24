@@ -13,6 +13,8 @@
 
 .modal_content {
   position: relative;
+  width: 90%;
+  height: 90%;
   object-fit:contain;
   object-position: center;
   padding: 0.5rem;
@@ -21,17 +23,22 @@
 background-image: url('../../images/card-bg.svg');
 background-size: cover;
 background-repeat: no-repeat;
-border-radius: 2rem;
+border-radius: 2rem;}
  
- 
-  
+
+
+
+@media screen and (min-width: 768px){
+.modal_content{  
+  width: 70%;
+  height: 80%;}
   
 }
 .modal_btn {
     position: absolute;
-    top:0.5rem;
-    right:0.5rem;
-    padding: 0.5rem;
+    top:1rem;
+    right:1rem;
+    padding: 1rem;
     background-color: transparent;
     border: none;
     cursor: pointer;

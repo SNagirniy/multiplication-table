@@ -1,14 +1,18 @@
+@import '../../css/variables.css';
+
 .box{
     display: flex;
     flex-direction: column;
-    width: 25em;
     align-items: center;
-    padding:10px;
+    width: 100%;
+ 
 }
 .label{
-    font-size: 2em;
-    padding: 10px;
-    text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
+    font-size: 3rem;
+    padding: 2rem;
+    text-shadow: var(--text-shadow);
+    text-transform: capitalize;
+    
     
 }
 .select {
@@ -19,14 +23,15 @@
   box-shadow: none;
   /* Personalize */
   flex: 1;
-  padding: 0 1em;
+  padding: 0 1rem;
+  background-color: var(--primary-color);
   background-image: none;
   cursor: pointer;
   font-family: inherit;
-  font-size: 22px;
+  font-size: 3rem;
   font-weight: lighter;
   text-align: center;
-  text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: var(--text-shadow);
 }
 /* Remove IE arrow */
 .select::-ms-expand {
@@ -36,8 +41,9 @@
 .custom_select{
   position: relative;
   display: flex;
-  width: 20em;
-  height: 3em;
+  width: 100%;
+padding: 2rem 0;
+background-color: var(--primary-color);
  border-radius: 5rem;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
@@ -49,12 +55,39 @@
   position: absolute;
   top: 0;
   right: 0;
-  padding: 1em;
-  background-color: #fff;
-  transition: .25s all ease;
+  font-size:2.5rem;
+  padding: 2.5rem;
+  background-color: var(--primary-color);
+  transition: all var(--transParam);
   pointer-events: none;
 }
 
 .custom_select:hover::after {
   color: #ff6e40;
 }
+
+
+@media screen and (min-width: 768px){
+  .box{
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    padding: 10px;
+}
+
+.select {
+  font-size: 2rem;
+}
+
+
+.custom_select{
+padding: 1rem 0 ;
+
+}
+
+.custom_select::after {
+font-size: 1.5rem;
+  padding: 1.5rem;
+
+}}

@@ -1,15 +1,16 @@
 @import '../../css/variables.css';
 
 .table{
-    margin-top: 1rem;
+    margin: auto;
+    margin-top: 3rem;
     padding: 1rem 4rem;
-    min-width: 30%;
-    font-size: 3rem;
+    width: 100%;
+    font-size: 5rem;
 background-image: url('../../images/card-bg.svg');
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
-border-radius: 25%;
+border-radius: 15%;
 overflow: hidden;
    
 }
@@ -19,9 +20,14 @@ overflow: hidden;
     text-align: center;
     color: var(--primary-color);
     filter: var(--filter);
+}
 
-    
-    
+
+@media screen and (min-width: 768px){
+    .table{
+   font-size: 3rem;
+   width: 50%;
+}
 }
 
 
