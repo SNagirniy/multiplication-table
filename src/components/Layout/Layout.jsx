@@ -22,7 +22,7 @@ const Layout = ({ currentLang, setLanguage, vocab }) => {
       <Footer />
       {isModalOpen && (
         <Modal onClose={toggleModal}>
-          <DiaryBook />
+          <DiaryBook vocab={vocab} />
         </Modal>
       )}
     </div>

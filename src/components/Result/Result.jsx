@@ -39,7 +39,7 @@ const Result = ({ gameResult, gameAmmount, vocab }) => {
     <div className={s.container}>
       <p className={s.result_title}>{title(score)}</p>
       <div className={s.result_box}>
-        <div className={s.card_box}>
+        <div>
           <p className={s.card_title}>{card_correct}</p>
           <div style={correct} className={s.correct_card}>
             <Card num={correctAnswer} />

@@ -4,9 +4,10 @@
 .game_progress{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 60%;
-    margin-bottom: 60px;
+    justify-content: center;
+    gap: 5rem;
+   
+    margin-bottom: 5em;
 }
 
 
@@ -15,7 +16,7 @@
     justify-content: center;
     align-items: center;
     
-    margin-bottom: 40px;
+    margin-bottom: 5rem;
     color: whitesmoke;
     font-size: 72px;
     text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
@@ -38,4 +39,5 @@
     fill: rgba(255, 174, 0, 0.849);
     filter: drop-shadow(2px 2px 1px #1e1f1e);
 }
+
 

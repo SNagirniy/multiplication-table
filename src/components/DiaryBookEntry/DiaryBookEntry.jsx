@@ -1,6 +1,6 @@
 import s from './diary_book_entry.module.css';
 import sprite from '../../images/sprite.svg';
-const DiaryBookEntry = ({ date, correctAnswer, gameAmount }) => {
+const DiaryBookEntry = ({ date, correctAnswer, gameAmount, vocab }) => {
   const score = Math.round((correctAnswer / gameAmount) * 100);
 
   const isStarGold = val => {
@@ -31,7 +31,7 @@ const DiaryBookEntry = ({ date, correctAnswer, gameAmount }) => {
           </svg>
         </td>
         <td className={s.raw_cell}>{correctAnswer}</td>
-        <td className={s.raw_cell}>of</td>
+        <td className={s.raw_cell}>{vocab.outof}</td>
         <td className={s.raw_cell}>{gameAmount}</td>
       </tr>
     </>

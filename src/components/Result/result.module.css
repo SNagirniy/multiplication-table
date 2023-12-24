@@ -1,6 +1,7 @@
 .container{
 display: flex;
 flex-direction: column;
+height: 100%;
 align-items: center;
 color:whitesmoke;
 filter: drop-shadow(2px 2px 1px #1e1f1e);
@@ -21,21 +22,30 @@ border-radius: 2rem;
 
 .result_title{
     font-size: 5rem;
+    text-transform: capitalize;
 }
 .result_box{
     display: flex;
-    
-    margin-top: 5rem;
+    gap: 10rem;
+    margin-top: 10rem;
 }
 
-.card_box{
-    margin-right: 5rem;
-}
 
 .card_value{
     font-size: 5rem;
 }
 
 .card_title{
-    margin-bottom: 2rem;
+    margin-bottom: 10rem;
+    text-transform: capitalize;
+}
+
+@media screen and (min-width: 768px) {
+  .container{
+    height: auto;
+  }
+    .card_title{
+    margin-bottom: 7rem;
+    
+}
 }

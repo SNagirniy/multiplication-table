@@ -2,14 +2,14 @@
 
 .container{
     display:flex;
-    justify-content: space-between;
-    width: 80%;
+    justify-content: space-evenly;
+    gap: 1rem;
+    width: 100%;
 }
 
 .label{
  
   cursor: pointer;
-  transition: transform 250ms ease-in-out;
   border-radius: 2rem;
   overflow: hidden;
   transition: all 250ms ease-in-out;
